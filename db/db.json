@@ -1,6 +1,9 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+{
+    "notes": [
+      {
+        "title": "Test",
+        "text": "I am a test",
+        "id": "551e2f85-3c97-4ee4-a06f-d5490044b091"
+      }
+    ]
+  }

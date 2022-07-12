@@ -11,6 +11,18 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
+function createNewNote(body, noteArray) {
+    const note = body;
+    note.id = generateNewID();
+    noteArray.push(note);
+    fs.writeFileSync(
+        path.join(_dirname, './db/db.json'),
+        JSON.stringify({ notes: noteArray }, null, 2)
+    );
+    return note;
+};
+
+
 app.listen(3001, () => {
     console.log(`API server now on port 3001`);
 });
